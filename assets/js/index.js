@@ -12,6 +12,18 @@ const promptUser = () => {
     return inquirer.prompt([
         {
             type: 'input',
+            name: 'username',
+            message: 'What is your GitHub username',
+            default: 'username',
+        },
+        {
+            type: 'input',
+            name: 'repo',
+            message: 'What is your repository name',
+            default: 'repo-name',
+        },
+        {
+            type: 'input',
             name: 'title',
             message: 'What is the title of your project?',
             default: 'My Project',
@@ -41,7 +53,7 @@ const promptUser = () => {
             default: 'Insert technologies used here' // commas should go into bullet points 
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'license',
             message: 'Choose a license', 
             choices: [ // how to create multiple answers?
@@ -59,7 +71,6 @@ const promptUser = () => {
 			    'Mozilla Public License 2.0',
 			    'The Unlicense'
             ],
-            default: 'MIT',
         },
         {
             type: 'input',
@@ -87,7 +98,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'contributions',
+            name: 'contribute',
             message: 'Contribution guidelines:',
             default: 'For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/) '
         },
@@ -95,7 +106,9 @@ const promptUser = () => {
 };
 
 const generateReadme = (answers) => {
-    `# ${answers.name}
+    `
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/${answers.username}?style=social"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/${answers.username}/${answers.repo}?style=social"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/${answers.username}/${answers.repo}?style=social">
+    # ${answers.name}
     ---
     ![project-demo](${answers.demo})
     
@@ -103,7 +116,7 @@ const generateReadme = (answers) => {
     
     ${answers.description}
     
-    link to the [site](${answers.deployed-link})
+    link to the [app](${answers.deployed-link})
     
     ## Technologies used 
     
@@ -114,19 +127,14 @@ const generateReadme = (answers) => {
     ${answers.usage}
     
     ## Contributors
-    *The Univserity of Sydney | Trilogy Education Services*
-    *Raimee Abbassi*
+    ${answers.contributors}
+
     ## License
-    MIT License
-    Copyright (c) [2021] [code-quiz]
-    Permission is herby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limiation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject following coditions: 
-    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
-    
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MECHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OF OTHER DEALINGS IN THE SOFTWARE.  
+    ${answers.license} 
     ---
     
     ## How to Contribute
-    For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/) 
+    ${answers.contribute}
     `
 }
 
