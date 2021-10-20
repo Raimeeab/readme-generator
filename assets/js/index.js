@@ -8,57 +8,89 @@ const fs = require('fs');
 const util = require('util');
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// how to create multiple answers 
-// how to create default settings (e.g. if user presses enter, then use MIT license, generic how to contribute etc.. )
-
 const promptUser = () => {
     return inquirer.prompt([
-      {
-        type: 'input',
-        name: 'title',
-        message: 'What is the title of your project',
-      },
-      {
-        type: 'input',
-        name: 'license',
-        message: 'Choose a license', 
-      },
-      {
-        type: 'input',
-        name: 'description',
-        message: 'What is your application?',
-      },
-      {
-        type: 'input',
-        name: 'usage',
-        message: 'How can you use this application?',
-      },
-      {
-        type: 'input',
-        name: 'installation',
-        message: 'How can you install this application?',
-      },
-      {
-        type: 'input',
-        name: 'issues',
-        message: 'How can you report issues?',
-      },
-      {
-        type: 'input',
-        name: 'contributions',
-        message: 'How can you make a contribution?',
-      },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of your project',
+            default: 'My Project',
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Please provide a brief description of your project',
+            default: 'Insert app description here.'
+        },
+        {
+          type: 'input',
+          name: 'deployed link',
+          message: 'Deployed link:',
+          default: 'Insert deployed link here.'
+        },
+        {
+            type: 'input',
+            name: 'technologies used',
+            message: 'What technlogies were used in this project? Please seperate each one with a comma',
+            default: 'Insert technologies used here'
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Choose a license', 
+            choices: [ // how to create multiple answers?
+                'Apache license 2.0',
+			    'GNU General Public License v3.0',
+			    'MIT',
+			    'BSD 2-clause "Simplified" license',
+			    'BSD 3-clause "New" or "Revised" license',
+			    'Boost Software License 1.0',
+			    'Creative Commons Zero v1.0 Universal',
+			    'Eclipse Public License 2.0',
+			    'GNU Affero General Public License v3.0',
+			    'GNU General Public License v2.0',
+			    'GNU Lesser General Public License v2.1',
+			    'Mozilla Public License 2.0',
+			    'The Unlicense'
+            ],
+            default: 'MIT',
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'How can you use this application?',
+            default: 'Insert app usage here.'
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'How can you install this application?',
+            default: 'Insert installation requirements here.'
+        },
+        {
+            type: 'input',
+            name: 'issues',
+            message: 'How can you report issues?',
+            default: 'Issues cannot be reported yet.'
+        },
+        {
+            type: 'input',
+            name: 'contributions',
+            message: 'Contribution guidelines:',
+            default: 'For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/) '
+        },
     ]);
   };
 
-
-//   .then((answers) => {
-//     // Use user feedback for... whatever!!
-//   })
-//   .catch((error) => {
-//     if (error.isTtyError) {
-//       // Prompt couldn't be rendered in the current environment
-//     } else {
-//       // Something else went wrong
-//     }
-//   });
+  const init = () => {
+      console.log(`-------------------------------------
+      THE PROFESSIONAL README GENERATOR.
+      
+      Please input the README information at the prompts to create your projects README.md
+      -------------------------------------`);
+      promptUser()
+        .then((answers) => writeFileAsync('README.md', generateReadme(answers)))
+        .then(() => console.log('Successfully wrote to README.md'))
+        .catch((err) => console.error(err));
+  };
+  init()
