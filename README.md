@@ -5,7 +5,7 @@
 ---
 
 ### Demo
-![app-demo]()
+![commandline-demo](./Assets/images/commandline-demo.jpg)
 
 ## Description
 When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions.
@@ -20,7 +20,7 @@ You can quickly and easily create a README file by using a command-line applicat
 
 ## Installation 
 
-1. Git clone this repository onto your local drive and navigate to the file on your terminal. *This can also be done by opening the file on Visual Studios and running it through the intergated terminal.*
+1. Git clone this repository onto your local machine and navigate to the file on your terminal. *This can also be done by opening the file on Visual Studios and running it through the intergated terminal.*
 
 2. In order for the app to function correctly, ensure you have the latest or most stable version of Node.js and that you've run `npm install` to get the necessary packages. 
 
@@ -43,5 +43,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ---
 ## How to Contribute
 
-For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/) 
+For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/).
 

@@ -1,14 +1,14 @@
-// Access inquirer 
+// Access Inquirer 
 const inquirer = require('inquirer');
 
 // Access fileSystem
 const fs = require('fs');
 
-//Import generateMarkdown.js
+// Import generateMarkdown.js
 const generateMarkdown = require('./Assets/Utils/generateMarkdown')
 
-// TODO: Create an array of questions for user input
-const questions = [
+// Object array of user prompts
+const prompts = [
     {
         type: 'input',
         name: 'username',
@@ -35,7 +35,7 @@ const questions = [
     {
         type: 'input',
         name: 'demo',
-        message: 'Insert pathway to demo gif/ image/ video/ link:',
+        message: 'Insert link to demo image/video/gif:',
         default: 'demo',
     },
     {
@@ -77,7 +77,7 @@ const questions = [
         type: 'input',
         name: 'installation',
         message: 'How can you install this application?',
-        default: 'Insert installation requirements here.'
+        default: 'No installation required.'
     },
     {
         type: 'input',
@@ -95,7 +95,7 @@ const questions = [
         type: 'input',
         name: 'contribute',
         message: 'Contribution guidelines:',
-        default: 'For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/) '
+        default: 'For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/).'
     },
 ];
 
@@ -113,7 +113,7 @@ function init() {
     
     Please input the README information at the prompts to create your projects README.md
 -------------------------------------`);
-    inquirer.prompt(questions)
+    inquirer.prompt(prompts)
     .then((answers) => {
         let title = `${answers.title}.md`
         writeToFile(title, generateMarkdown(answers))

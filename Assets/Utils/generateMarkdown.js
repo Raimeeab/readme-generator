@@ -1,3 +1,9 @@
+// Access moment.js
+const moment = require('moment');  
+
+// Get current year for license
+const year = moment().format('YYYY');
+
 // Get License Badge
 function renderLicenseBadge(license) {
     const licenseBadge = {
@@ -44,19 +50,21 @@ function renderLicenseSection(license){
   return licenseSection[license];  
 }
 
-function technlogiesUsed(str){
+// Convert comma breaks to bullet points 
+function convertToBullet(str){
     let output = '';
     let arr = str.split(",");
     for(i = 0; i < arr.length; i++){
-        output += `-${arr[i]}<br>`
+        output += `- ${arr[i]}<br>`
     }
     return output
 }
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(answers) {
+// Generate markdown for README.md file
+function generateMarkdown(data) {
   return `
-  # ${answers.title} <img alt="GitHub Followers" src="https://img.shields.io/github/followers/${answers.username}"> <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/${answers.username}/${answers.repo}">  ${renderLicenseBadge(answers.license)}  <img alt="GitHub Commit Activity" src="https://img.shields.io/github/commit-activity/w/${answers.username}/${answers.repo}">
+  <img alt="GitHub Followers" src="https://img.shields.io/github/followers/${data.username}"> <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/${data.username}/${data.repo}">  ${renderLicenseBadge(data.license)}  <img alt="GitHub Commit Activity" src="https://img.shields.io/github/commit-activity/w/${data.username}/${data.repo}">
+  # ${data.title}
   ---
 
   ## Table of Content 
@@ -70,48 +78,49 @@ function generateMarkdown(answers) {
   * [License](#license)
   * [Contributions](#contributions)
   * [Questions](#questions)
-
-
-  ![project-demo](${answers.demo})
+  
+  ## Demo
+  ![project-demo](${data.demo})
   
   ## Description
   
-  ${answers.description}
+  ${data.description}
   
-  link to the [app](${answers["deployed-link"]})
+  link to the [app](${data["deployed-link"]})
   
   ## Technologies
   
-  ${technlogiesUsed(answers.technologies)}
+  ${convertToBullet(data.technologies)}
   
   ## Usage
   
-  ${answers.usage}
+  ${data.usage}
   
   ## Installation
   
-  ${answers.installation}
+  ${data.installation}
   
   ## Testing
   
-  ${answers.testing}
+  ${data.testing}
   
   ## Contributors
-  ${answers.contributors}
+  ${convertToBullet(data.contributors)}
   
   ## License
-  Copyright (c) [2021] [${answers.title}] <br>
+  ${data.license}<br>
+  Copyright (c) [${year}] [${data.title}] <br>
 
-  ${renderLicenseSection(answers.license)}
-  
+  ${renderLicenseSection(data.license)}
+
   ---
   
   ## Contributions
-  ${answers.contribute}
+  ${data.contribute}
 
   ## Questions 
-  If you have any questions, contact me at ${answers.email}. <br>
-  You can find more of my work [here](https://github.com/${answers.username}).
+  If you have any questions, contact me at ${data.email}. <br>
+  You can find more of my work [here](https://github.com/${data.username}).
   `
 }
 
