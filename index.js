@@ -30,13 +30,13 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'Project title:',
-        default: 'My Project',
+        default: 'my-project',
     },
     {
         type: 'input',
         name: 'demo',
         message: 'Insert pathway to demo gif/ image/ video/ link:',
-        default: 'Insert demo here',
+        default: 'demo',
     },
     {
         type: 'input',
@@ -54,13 +54,13 @@ const questions = [
         type: 'input',
         name: 'technologies',
         message: 'Technlogies used for project: (please seperate each one with a comma)',
-        default: 'Insert technologies used here' // TODO: commas go into bullet points 
+        default: 'Insert technologies used here'
     },
     {
         type: 'list',
         name: 'license',
         message: 'Choose a license', 
-        choices: [ // TODO: generate each License info into README 
+        choices: [
             'APACHE license 2.0',
             'GNU General Public License v3.0',
             'MIT',
@@ -89,7 +89,7 @@ const questions = [
         type: 'input',
         name: 'contributors',
         message: 'List contributors: (please seperate by commas)',
-        default: 'Insert contributors here.' //TODO: commas should become breaklines 
+        default: 'Insert contributors here.'
     },
     {
         type: 'input',
