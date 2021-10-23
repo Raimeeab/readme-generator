@@ -64,7 +64,7 @@ const questions = [
             'APACHE license 2.0',
             'GNU General Public License v3.0',
             'MIT',
-            'none'
+            'Unlicensed'
         ],
     },
     {
