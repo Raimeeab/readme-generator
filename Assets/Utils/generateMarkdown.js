@@ -55,7 +55,7 @@ function convertToBullet(str){
     let output = '';
     let arr = str.split(",");
     for(i = 0; i < arr.length; i++){
-        output += `- ${arr[i]}<br>`
+        output += `-${arr[i]}<br>`
     }
     return output
 }
