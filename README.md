@@ -26,7 +26,7 @@ You can quickly and easily create a README file by using a command-line applicat
 - `npm install`
 - `npm install inquirer`
 - `npm install moment --save` <br>
-*You can find a walkthrough video listed under Assets in the repository*
+*You can find a walkthrough video [here](https://github.com/Raimeeab/readme-generator/blob/main/Assets/demos/walkthrough.mov)*
 
 ![install](./Assets/demos/install.gif)
 
