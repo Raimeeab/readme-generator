@@ -22,7 +22,10 @@ You can quickly and easily create a README file by using a command-line applicat
 
 1. Git clone this repository onto your local machine and navigate to the file on your terminal. *This can also be done by opening the file on Visual Studios and running it through the intergated terminal.*
 
-2. In order for the app to function correctly, ensure you have the latest or most stable version of Node.js and that you've run `npm install` to get the necessary packages. 
+2. In order for the app to function correctly, ensure you have the latest or most stable version of Node.js and that you've run:
+- `npm install`
+- `npm install inquirer`
+- `npm instal moment --save`
 
 3. Run `node index.js` and follow the prompts that run on your terminal. This will then generate your very own README file for your project. 
 
