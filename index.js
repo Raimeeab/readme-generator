@@ -63,7 +63,7 @@ const prompts = [
         choices: [
             'APACHE license 2.0',
             'GNU General Public License v3.0',
-            'MIT',
+            'MIT License',
             'Unlicensed'
         ],
     },
