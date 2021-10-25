@@ -6,7 +6,7 @@
 ## Table of Content 
 
 * [Description](#description)
-* [Technlogies Used](#technologies)
+* [Technlogies](#technologies)
 * [Usage](#usage)
 * [Installation](#installation)
 * [Testing](#testing)
