@@ -38,8 +38,6 @@ You can quickly and easily create a README file by using a command-line applicat
 
 2. In order for the app to function correctly, ensure you have the latest or most stable version of Node.js and that you've run:
     - `npm install`
-    - `npm install inquirer`
-    - `npm install moment --save` 
 
 ![install](./Assets/demos/install.gif)
 
