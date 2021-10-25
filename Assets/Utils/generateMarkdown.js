@@ -55,7 +55,7 @@ function convertToBullet(str){
     let output = '';
     let arr = str.split(",");
     for(i = 0; i < arr.length; i++){
-        output += `-${arr[i]}<br>`
+        output += `- ${arr[i]}\n`
     }
     return output
 }
@@ -63,65 +63,65 @@ function convertToBullet(str){
 // Generate markdown for README.md file
 function generateMarkdown(data) {
   return `
-  <img alt="GitHub Followers" src="https://img.shields.io/github/followers/${data.username}"> <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/${data.username}/${data.repo}">  ${renderLicenseBadge(data.license)}  <img alt="GitHub Commit Activity" src="https://img.shields.io/github/commit-activity/w/${data.username}/${data.repo}">
-  # ${data.title}
-  ---
+<img alt="GitHub Followers" src="https://img.shields.io/github/followers/${data.username}"> <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/${data.username}/${data.repo}">  ${renderLicenseBadge(data.license)}  <img alt="GitHub Commit Activity" src="https://img.shields.io/github/commit-activity/w/${data.username}/${data.repo}">
+# ${data.title}
+---
 
-  ## Table of Content 
-  
-  * [Description](#description)
-  * [Technlogies](#technologies)
-  * [Usage](#usage)
-  * [Installation](#installation)
-  * [Testing](#testing)
-  * [Contributors](#contributors)
-  * [License](#license)
-  * [Contributions](#contributions)
-  * [Questions](#questions)
-  
-  ## Demo
-  ![project-demo](${data.demo})
-  
-  ## Description
-  
-  ${data.description}
-  
-  link to the [app](${data["deployed-link"]})
-  
-  ## Technologies
-  
-  ${convertToBullet(data.technologies)}
-  
-  ## Usage
-  
-  ${data.usage}
-  
-  ## Installation
-  
-  ${data.installation}
-  
-  ## Testing
-  
-  ${data.testing}
-  
-  ## Contributors
-  ${convertToBullet(data.contributors)}
-  
-  ## License
-  ${data.license}<br>
-  Copyright (c) [${year}] [${data.title}] <br>
+## Table of Content 
 
-  ${renderLicenseSection(data.license)}
+* [Description](#description)
+* [Technlogies](#technologies)
+* [Usage](#usage)
+* [Installation](#installation)
+* [Testing](#testing)
+* [Contributors](#contributors)
+* [License](#license)
+* [Contributions](#contributions)
+* [Questions](#questions)
 
-  ---
-  
-  ## Contributions
-  ${data.contribute}
+## Demo
+![project-demo](${data.demo})
 
-  ## Questions 
-  If you have any questions, contact me at ${data.email}. <br>
-  You can find more of my work [here](https://github.com/${data.username}).
-  `
+## Description
+
+${data.description}
+
+link to the [app](${data["deployed-link"]})
+
+## Technologies
+
+${convertToBullet(data.technologies)}  
+
+## Usage
+
+${data.usage}
+
+## Installation
+
+${data.installation}
+
+## Testing
+
+${data.testing}
+
+## Contributors
+${convertToBullet(data.contributors)}
+
+## License
+${data.license}<br>
+Copyright (c) [${year}] [${data.title}] <br>
+
+${renderLicenseSection(data.license)}
+
+---
+
+## Contributions
+${data.contribute}
+
+## Questions 
+If you have any questions, contact me at ${data.email}. <br>
+You can find more of my work [here](https://github.com/${data.username}).
+`
 }
 
 module.exports = generateMarkdown;
