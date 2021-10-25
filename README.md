@@ -9,10 +9,9 @@
 * [Technlogies](#technologies)
 * [Usage](#usage)
 * [Installation](#installation)
-* [Testing](#testing)
 * [Contributors](#contributors)
 * [License](#license)
-* [Contributions](#contributions)
+* [Contribution](#contribution)
 * [Questions](#questions)
 
 <a name="description"></a>
@@ -55,7 +54,7 @@ Follow the installation steps to generate your readme in your command-line termi
 - If you wish to opt out of the prompts midway, simply type `Ctrl+C`.
 - Although there is an option to have an unlicensed project, it is highly reccomended to always have some sort of license agreement.
 
-<a name="contributos"></a>
+<a name="contributors"></a>
 ## 👥 Contributors
 
 *[Raimee Abbassi](https://github.com/Raimeeab)* <br>
@@ -72,7 +71,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MECHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OF OTHER DEALINGS IN THE SOFTWARE.  
 
 ---
-<a name="contribute"></a>
+<a name="contribution"></a>
 ## 🤝 How to Contribute
 
 For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/).
