@@ -6,7 +6,7 @@
 ## Table of Content 
 
 * [Description](#description)
-* [Technlogies](#technologies)
+* [Technlogies Used](#technologies)
 * [Usage](#usage)
 * [Installation](#installation)
 * [Testing](#testing)
@@ -15,11 +15,13 @@
 * [Contributions](#contributions)
 * [Questions](#questions)
 
+<a name="description"></a>
 ## 📝 Description
 When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions.
 
 You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
 
+<a name="technlogies"></a>
 ## 🕹 Technologies used 
 
 - JavaScript
@@ -27,6 +29,7 @@ You can quickly and easily create a README file by using a command-line applicat
 - Inquirer 
 - Moment.js
 
+<a name="installation"></a>
 ## ⚙️ Installation 
 
 *You can find a step-by-step tutorial [here](https://github.com/Raimeeab/readme-generator/blob/main/Assets/demos/walkthrough.mov)*
@@ -45,17 +48,20 @@ You can quickly and easily create a README file by using a command-line applicat
 
 ![command-line](./Assets/demos/commandline-demo.jpg)
 
+<a name="usage"></a>
 ## 🖥 Usage 
 Follow the installation steps to generate your readme in your command-line terminal. 
 - If you wish to do multiple READMEs, please keep in mind that the README file will overwrite itself if the project name is the same.
 - If you wish to opt out of the prompts midway, simply type `Ctrl+C`.
 - Although there is an option to have an unlicensed project, it is highly reccomended to always have some sort of license agreement.
 
+<a name="contributos"></a>
 ## 👥 Contributors
 
 *[Raimee Abbassi](https://github.com/Raimeeab)* <br>
 *The Univserity of Sydney | Trilogy Education Services* <br>
 
+<a name="license"></a>
 ## 🔖 License
 
 MIT License
@@ -66,9 +72,11 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MECHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OF OTHER DEALINGS IN THE SOFTWARE.  
 
 ---
+<a name="contribute"></a>
 ## 🤝 How to Contribute
 
 For information on how to contribute, please follow the guidlelines listed in [Contributor Covenant](https://www.contributor-covenant.org/).
 
+<a name="questions"></a>
 ## ❓ Questions
 If you have any questions, contact me via [email](raimee.abbassi@gmail.com). You can also find more of my work [here](https://github.com/Raimeeab).
