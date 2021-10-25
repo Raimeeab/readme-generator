@@ -21,7 +21,7 @@ When creating an open source project on GitHub, it’s important to have a high-
 
 You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
 
-<a name="technlogies"></a>
+<a name="technologies"></a>
 ## 🕹 Technologies used 
 
 - JavaScript
